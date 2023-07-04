@@ -88,18 +88,21 @@ const Weather = () => {
     useEffect( () => {
         
         const loadData = async () => {
-            await axios.get('http://api.weatherapi.com/v1/current.json?key=45886d53e9ef46d391941102230406&q=kathmandu&aqi=no').then(res => { setData(res.data), setLoaded(true) })
+            await axios.get('http://api.weatherapi.com/v1/current.json?key=45886d53e9ef46d391941102230406&q=kathmandu&aqi=no').then(res => { setData(res.data) })
     
-             
+            setLoaded(true)
+            
                 if( ( hours > 6 && hours < 18) &&  Rain.includes(data.current.condition.code))
                 {
                     setIcon(DayRain)
+                    setLoaded(true)
                 
                 }
                else if ( !( hours > 6 && hours < 18)  &&  Rain.includes(data.current.condition.code)   )
                 {
 
                     setIcon(NightRain)
+                    setLoaded(true)
          
                 }  
 
@@ -107,37 +110,42 @@ const Weather = () => {
                 {
 
                     setIcon(ClearNight) 
+                    setLoaded(true)
         
                 }
                 else if(( hours > 6 && hours < 18) &&  Clear.includes(data.current.condition.code) )
                 {
 
                     setIcon(ClearDay)   
+                    setLoaded(true)
        
                 }
                 else  if(!( hours > 6 && hours < 18)  &&  Cloudy.includes(data.current.condition.code) )
                 {
 
-                    setIcon(CloudyNight)  
+                    setIcon(CloudyNight)
+                    setLoaded(true)  
         
                 }
                 else  if(( hours > 6 && hours < 18) && Cloudy.includes(data.current.condition.code) )
                 {
 
-                    setIcon(CloudyDay)   
+                    setIcon(CloudyDay)  
+                    setLoaded(true) 
                
                 }
                 else  if(!( hours > 6 && hours < 18) && Thunder.includes(data.current.condition.code) )
                 {
 
-                    setIcon(NightRainWithThunder)   
+                    setIcon(NightRainWithThunder)  
+                    setLoaded(true) 
               
                 }
                 else  if(( hours > 6 && hours < 18)&& Thunder.includes(data.current.condition.code))
                 {
 
                     setIcon(DayRainWithThunder)   
-                  
+                    setLoaded(true)
                 }
                 setLoaded(true)
 
