@@ -1,0 +1,50 @@
+
+            //     if( !   ( hours > 6 && hours < 17) && (data.current.condition.code === (1153 ||1246 ||1243 ||1240 ||1201 ||1198 ||1195|| 1192 ||1189|| 1186|| 1183|| 1180   ||1171|| 1168 ||1153|| 1150)) )
+            //     {
+
+            //         setIcon(NightRain)
+            //         setLoaded(false)
+            //     }
+            //    else if ( ( hours > 6 && hours < 20) && (data.current.condition.code == (1153 ||1246 ||1243 ||1240 ||1201 ||1198 ||1195|| 1192 ||1189|| 1186|| 1183|| 1180 ||1171|| 1168 ||1153|| 1150 )))
+            //     {
+
+            //         setIcon(DayRain)
+            //         setLoaded(false)
+            //     }  
+
+            //   else if(!( hours > 6 && hours < 20) && data.current.condition.code == (1000) )
+            //     {
+
+            //         setIcon(ClearNight) 
+            //         setLoaded(false) 
+            //     }
+            //     else if(( hours > 6 && hours < 20) && data.current.condition.code == (1000) )
+            //     {
+
+            //         setIcon(ClearDay)   
+            //         setLoaded(false)
+            //     }
+            //     else  if(!( hours > 6 && hours < 20) && (data.current.condition.code == (1003 ||1006  ||1009||  1030 || 1135 ||1147 )) )
+            //     {
+
+            //         setIcon(CloudyNight)  
+            //         setLoaded(false)
+            //     }
+            //     else  if(( hours > 6 && hours < 20) && (data.current.condition.code == (1003 ||1006  ||1009||  1030 || 1135 ||1147) ))
+            //     {
+
+            //         setIcon(CloudyDay)   
+            //         setLoaded(false)
+            //     }
+            //     else  if(!( hours > 6 && hours < 20) && (data.current.condition.code == (1282 ||1279|| 1276 ||1273)))
+            //     {
+
+            //         setIcon(NightRainWithThunder)   
+            //         setLoaded(false)
+            //     }
+            //     else  if(( hours > 6 && hours < 20)&& (data.current.condition.code == (1282 ||1279|| 1276 ||1273)))
+            //     {
+
+            //         setIcon(DayRainWithThunder)   
+            //         setLoaded(false)
+            //     }

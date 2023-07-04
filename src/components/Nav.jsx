@@ -27,11 +27,11 @@ const Nav = () => {
     
   return (
 
-          <div className='  z-30 absolute left-6 top-2 Navbar flex'>
+          <div className='   z-30 absolute left-6 top-2 Navbar flex'>
          <img src={Dhz} width={40} className=' rounded-full' alt="dhz" /> 
          <div className=" dark:bg-white  ml-10 w-20 h-10 bg-slate-700 rounded-full flex items-center">
           <button onClick={handleThemeSwitch}  className=' bg-white ml-1 w-[30px] h-[30px] rounded-full'></button>
-          <button onClick={handleThemeSwitch}  className=' bg-slate-700 ml-1 w-[30px] h-[30px] rounded-full'></button>
+          <button onClick={handleThemeSwitch}  className=' bg-slate-700 ml-3 w-[30px] h-[30px] rounded-full'></button>
          </div>
          </div>
     
