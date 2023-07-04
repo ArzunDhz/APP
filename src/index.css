@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.player-controls > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border: 0;
+  background: inherit;
+  cursor: pointer;
+}
+
+.player-controls > button.emphasised {
+  background: #fe0e17;
+  color: white;
+  border-radius: 100%;
+}
+
+.player-controls .volume-control {
+  margin-left: 24px;
+}
+
+.player-controls .volume-control svg {
+  margin-right: 8px;
+}
+
+
+li.dragging
+{
+ background-color:#70da74;
+}
+
+li.dark.dragging
+{
+ background-color:#70da74;
+}
+
+
+
+.container {
+  position: relative;
+  border: 1px solid black;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.box1 {
+  position: absolute;
+  top: 0px; 
+  left: -50px;
+}
+.box2
+{
+  position: absolute;
+  top: 550px; 
+  left: 1200px;
+  
+}
+.box3
+{
+  position: absolute;
+  top: 650px; 
+  left: 50px;
+  
+}
+ input:focus{
+  outline: none;
+}
