@@ -88,7 +88,7 @@ const Weather = () => {
     useEffect( () => {
         
         const loadData = async () => {
-            await axios.get('http://api.weatherapi.com/v1/current.json?key=45886d53e9ef46d391941102230406&q=kathmandu&aqi=no').then(res => { setData(res.data) })
+            await axios.get('https://api.weatherapi.com/v1/current.json?key=45886d53e9ef46d391941102230406&q=kathmandu&aqi=no').then(res => { setData(res.data) })
     
             setLoaded(true)
             
