@@ -8,7 +8,7 @@ import { v4 } from 'uuid';
 
 
 const Todo = () => {
-    const [TodolistItems, setTodoListItems] = useState([]);
+    const [TodolistItems, setTodoListItems] = useState([{id:v4(),name:'Drag Me'},{id:v4(),name:'Drop  Me'},{id:v4(),name:'Up'},{id:v4(),name:'Down'}]);
 
     function handleDrag(result)
     {
@@ -48,9 +48,9 @@ const Todo = () => {
         <>
  
             <div>
-                <div    className=' select-none rounded-xl m-20'>
+                <div    className='  select-none rounded-xl mt-[20%] ml-[20%]'>
                     <form  onSubmit={e =>handelSubmit(e)} className=" flex">
-                        <input   placeholder='  Todo....' autoComplete="off" name='data' className=' dark:text-white indent-4  bg-slate-200 dark:bg-slate-700 w-[250px] rounded-lg m-2' type="text" />
+                        <input   placeholder='  Todo....' autoComplete="off" name='data' className='  dark:text-white indent-4  bg-slate-200 dark:bg-slate-700 w-[250px] rounded-lg m-2' type="text" />
                         
                     </form>
 
@@ -87,4 +87,3 @@ const Todo = () => {
 }
 
 export default Todo
-

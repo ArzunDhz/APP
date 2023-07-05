@@ -15,7 +15,7 @@ useEffect(()=> {
 },[newdate])
 
   return (
-    <div className=' cursor-grab dark:bg-slate-700  shadow-lg  dark:text-white text-center bg-white text-balck rounded-xl h-[34px] w-[150px]'>
+    <div className='  dark:bg-slate-700  shadow-lg  dark:text-white text-center bg-white text-balck rounded-xl h-[34px] w-[150px]'>
 {`${newdate}` }
     </div>
   )

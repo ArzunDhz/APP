@@ -19,10 +19,10 @@ const Weather = () => {
     const isClicked = useRef(false);
 
     const coords = useRef({
-        startX: 1000,
-        startY: 50,
-        lastX: 1000,
-        lastY: 50
+        startX: 1520,
+        startY: 100,
+        lastX: 1520,
+        lastY: 100
     });
 
     useEffect(() => {
@@ -92,6 +92,7 @@ const Weather = () => {
     
             setLoaded(true)
             
+            
                 if( ( hours > 6 && hours < 18) &&  Rain.includes(data.current.condition.code))
                 {
                     setIcon(DayRain)
@@ -150,8 +151,8 @@ const Weather = () => {
                 setLoaded(true)
 
         }
-         loadData();
-
+          loadData();
+setInterval(loadData(),60000)
 
     },[loaded])
 
@@ -159,14 +160,14 @@ const Weather = () => {
 
     return (
         <div ref={containerRef} className="">
-            <div ref={boxRef} className=' cursor-grab dark:bg-slate-700 dark:text-white shadow-xl bg-white w-[200px] h-[250px] justify-center  flex-col absolute left-[80%] top-[2%] rounded-xl'>
+            <div ref={boxRef} className=' cursor-grab dark:bg-slate-700 dark:text-white shadow-xl bg-white w-[15%] h-[35%] justify-center  flex-col absolute left-[80%] top-[10%] rounded-xl'>
                 {loaded ?
                     <>
                         <div className=" select-none ">
                             <Lottie className=' ml-[20px]w-[30px] h-[150px] ' animationData={icon} />
-                            <h1 className=' text-[25px] text-center '>  {data.current.temp_c}°C</h1>
-                            <h1 className='  text-[14px] text-center'>{data.current.condition.text}</h1>
-                            <h4 className=' text-[10px] text-center mt-1' >{data.location.name}</h4>
+                            <h1 className=' text-[45px] text-center '>  {data.current.temp_c}°C</h1>
+                            <h1 className='  text-[20px] text-center'>{data.current.condition.text}</h1>
+                            <h4 className=' text-[15px] text-center mt-1' >{data.location.name}</h4>
 
                         </div>
                     </>

@@ -69,7 +69,6 @@ li.dark.dragging
 
 .container {
   position: absolute;
-  border: 1px solid black;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -78,15 +77,15 @@ li.dark.dragging
 
 .box1 {
   position: absolute;
-  top: 0px; 
-  left: -70px;
+  top:6%; 
+  left: 0px;
 }
 
 .box3
 {
   position: absolute;
-  top: 650px; 
-  left: 50px;
+  top: 95%; 
+  left: 1%;
   
 }
  input:focus{

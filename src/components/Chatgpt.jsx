@@ -9,9 +9,9 @@ const Chatgpt = () => {
   const isClicked = useRef(false);
 
   const coords = useRef({
-    startX: 350,
+    startX: 0,
     startY: 100,
-    lastX: 350,
+    lastX: 0,
     lastY: 100
   });
 
@@ -99,16 +99,16 @@ const Chatgpt = () => {
 
   const [chatData, setChatData] = useState()
   return (
-    <div ref={containerRef} className="  ">
+    <div   ref={containerRef} className="   ">
 
-      <div ref={boxRef} className=' absolute  w-[50%] h-[60%]   ' >
+      <div ref={boxRef} className=' cursor-grab  select-none absolute top-[10%]  w-[50%] h-[60%]   ' >
         <div className="overflow-hidden  overflow-y-scroll   flex w-[100%] h-[100%] 
        dark:bg-slate-700 shadow-xl bg-white absolute left-[50%]
         top-[10%]  rounded-t-lg ">
           {!loading ? <>  
 
             {asked ? <>
-              <p className=' text-[14px] dark:text-white w-[99%]  absolute mt-2 ml-1' >
+              <p className=' text-[100%] dark:text-white w-[99%]  absolute mt-2 ml-1' >
                 {(chatData)}
               </p>
             </> :
@@ -122,8 +122,8 @@ const Chatgpt = () => {
         </div>
         <form onSubmit={(e) => handelSubmit(e)} className='  relative left-[50%] top-[109%] z-10 w-[100%] mt-auto ' action="">
           <input autoComplete='off' name='data' placeholder=' Ask me anything...'
-            className='   select-none  dark:text-white dark:bg-slate-600 
-           bg-slate-100 indent-4 rounded-t-none rounded-b-xl  w-full  h-[20px]' />
+            className='   select-none  dark:text-white dark:bg-slate-600
+           bg-slate-100 indent-4 rounded-t-none rounded-b-xl  w-full  h-[30px]' />
         </form>
       </div>
 
