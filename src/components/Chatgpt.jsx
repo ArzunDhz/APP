@@ -1,8 +1,5 @@
-import { data } from 'autoprefixer'
+
 import React, { useState, useEffect, useRef } from 'react'
-const Api = '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'
-const api2 = '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'
-import { PhotoIcon, DocumentTextIcon } from '@heroicons/react/24/solid'
 import Loading from './ExtraCompnenents/Loading'
 
 const Chatgpt = () => {
@@ -71,7 +68,7 @@ const Chatgpt = () => {
     const options = {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${api2}`,
+        'Authorization': `Bearer ${import.meta.env.VITE_API_KEY}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
