@@ -19,9 +19,9 @@ const Weather = () => {
     const isClicked = useRef(false);
 
     const coords = useRef({
-        startX: 1250,
+        startX: 1000,
         startY: 50,
-        lastX: 1250,
+        lastX: 1000,
         lastY: 50
     });
 
@@ -159,14 +159,14 @@ const Weather = () => {
 
     return (
         <div ref={containerRef} className="">
-            <div ref={boxRef} className=' cursor-grab dark:bg-slate-700 dark:text-white shadow-xl bg-white w-[250px] h-[300px] justify-center  flex-col absolute left-[1250px] top-[50px] rounded-xl'>
+            <div ref={boxRef} className=' cursor-grab dark:bg-slate-700 dark:text-white shadow-xl bg-white w-[200px] h-[250px] justify-center  flex-col absolute left-[80%] top-[2%] rounded-xl'>
                 {loaded ?
                     <>
                         <div className=" select-none ">
                             <Lottie className=' ml-[20px]w-[30px] h-[150px] ' animationData={icon} />
-                            <h1 className=' text-[40px] text-center '>  {data.current.temp_c}°C</h1>
-                            <h1 className='  text-[18px] text-center'>{data.current.condition.text}</h1>
-                            <h4 className=' text-[14px] text-center mt-1' >{data.location.name}</h4>
+                            <h1 className=' text-[25px] text-center '>  {data.current.temp_c}°C</h1>
+                            <h1 className='  text-[14px] text-center'>{data.current.condition.text}</h1>
+                            <h4 className=' text-[10px] text-center mt-1' >{data.location.name}</h4>
 
                         </div>
                     </>

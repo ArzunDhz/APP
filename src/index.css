@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+   width: 5px;
+}
+::-webkit-scrollbar-track{
+ background-color: transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color:rgb(8, 24, 38);
+  border-radius: 8px;
+}
+
+
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -54,25 +68,20 @@ li.dark.dragging
 
 
 .container {
-  position: relative;
+  position: absolute;
   border: 1px solid black;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+ 
 }
 
 .box1 {
   position: absolute;
   top: 0px; 
-  left: -50px;
+  left: -70px;
 }
-.box2
-{
-  position: absolute;
-  top: 550px; 
-  left: 1200px;
-  
-}
+
 .box3
 {
   position: absolute;

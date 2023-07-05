@@ -42,10 +42,10 @@ const boxRef = useRef(null);
 const isClicked = useRef(false);
 
 const coords = useRef({
-  startX: 1200,
-  startY: 550,
-  lastX: 1200,
-  lastY: 550
+  startX: 1000,
+  startY: 420,
+  lastX: 1000,
+  lastY: 420
 });
 
 useEffect(() => {
@@ -96,7 +96,7 @@ useEffect(() => {
 
        <div >
         <div  ref={containerRef}className=' bg-black rounded-xl cursor-grab'>
-          <div  ref={boxRef}  className="App box2 w-[320px] h-[120px] drop-shadow-xl   dark:drop-shadow-2xl   dark:bg-slate-700 bg-white rounded-xl">
+          <div  ref={boxRef}  className="App absolute top-[75%] left-[74%] w-[300px] h-[120px] drop-shadow-xl   dark:drop-shadow-2xl   dark:bg-slate-700 bg-white rounded-xl">
             <div className="video-title select-none dark:text-white  mt-2 ">{playerDetails.title}</div>
             <div className="player-controls">
               <button onClick={actions.previousVideo}>

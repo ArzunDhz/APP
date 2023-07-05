@@ -1,7 +1,7 @@
 import { data } from 'autoprefixer'
 import React, { useState, useEffect, useRef } from 'react'
 const Api = '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'
-const api2 = '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'
+const api2 = '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'
 import { PhotoIcon, DocumentTextIcon } from '@heroicons/react/24/solid'
 import Loading from './ExtraCompnenents/Loading'
 
@@ -87,6 +87,7 @@ const Chatgpt = () => {
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', options)
       const data = await response.json()
+      console.log(data)
       setChatData(data.choices[0].message.content)
 
       setLoading(false)
@@ -101,29 +102,36 @@ const Chatgpt = () => {
 
   const [chatData, setChatData] = useState()
   return (
-    <div ref={containerRef} className=" cursor-grab ">
+    <div ref={containerRef} className="  ">
 
-      <div ref={boxRef} className='    flex w-[820px] h-[500px]  dark:bg-slate-700 shadow-xl bg-white absolute left-[350px] top-[60px] rounded-xl ' >
-        <form onSubmit={(e) => handelSubmit(e)} className=' mt-auto ' action="">
-          <input autoComplete='off' name='data' placeholder='Ask me anything...' className=' select-none  dark:text-white dark:bg-slate-600  bg-slate-100 indent-4 rounded-t-none rounded-b-xl w-[820px] h-[30px]' />
-        </form>
-        {!loading ? <>
+      <div ref={boxRef} className=' absolute  w-[50%] h-[60%]   ' >
+        <div className="overflow-hidden  overflow-y-scroll   flex w-[100%] h-[100%] 
+       dark:bg-slate-700 shadow-xl bg-white absolute left-[50%]
+        top-[10%]  rounded-t-lg ">
+          {!loading ? <>  
 
-          {asked ? <>
-            <ui className=' dark:text-white w-[800px] h-[200px] absolute mt-3 ml-1' >
-              {(chatData).slice(0, 1700) + '...'}
-            </ui>
+            {asked ? <>
+              <p className=' text-[14px] dark:text-white w-[99%]  absolute mt-2 ml-1' >
+                {(chatData)}
+              </p>
+            </> :
+              <>
+              </>}
           </> :
             <>
+              <Loading />
             </>}
-        </> :
-          <>
-            <Loading />
-          </>}
 
-     
-
+        </div>
+        <form onSubmit={(e) => handelSubmit(e)} className='  relative left-[50%] top-[109%] z-10 w-[100%] mt-auto ' action="">
+          <input autoComplete='off' name='data' placeholder=' Ask me anything...'
+            className='   select-none  dark:text-white dark:bg-slate-600 
+           bg-slate-100 indent-4 rounded-t-none rounded-b-xl  w-full  h-[20px]' />
+        </form>
       </div>
+
+ 
+
     </div>
 
   )
